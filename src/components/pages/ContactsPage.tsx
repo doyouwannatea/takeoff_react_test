@@ -1,5 +1,6 @@
 import { Container, Grid } from '@mui/material';
 import AppHeader from '../AppHeader';
+import ContactsList from '../ContactsList';
 import ChangeContactForm from '../forms/ChangeContactForm';
 import CreateContactForm from '../forms/CreateContactForm';
 
@@ -13,7 +14,9 @@ const ContactsPage = () => {
             <CreateContactForm />
             {/* <ChangeContactForm /> */}
           </Grid>
-          <Grid item>rest</Grid>
+          <Grid item sm>
+            <ContactsList />
+          </Grid>
         </Grid>
       </Container>
     </>
