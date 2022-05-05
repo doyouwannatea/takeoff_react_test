@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "json-server": "json-server db.json --port 3004",
     "stylelint": "stylelint **/*.{css,scss}",
     "stylelint:fix": "stylelint **/*.{css,scss} --fix",
     "eslint": "eslint .",
@@ -20,8 +21,14 @@
     "*.{ts,tsx}": "eslint --fix"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.4",
+    "@reduxjs/toolkit": "^1.8.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
@@ -32,6 +39,7 @@
     "eslint": "^8.14.0",
     "eslint-plugin-react": "^7.29.4",
     "husky": "^7.0.4",
+    "json-server": "^0.17.0",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
     "stylelint": "^14.8.2",
