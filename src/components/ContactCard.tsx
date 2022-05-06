@@ -1,6 +1,13 @@
 import { Button, Card, Divider, Typography } from '@mui/material';
+import { Contact } from '../models/Contact';
 
-const ContactCard = () => {
+type Props = {
+  contact: Contact;
+  onDelete: (contact: Contact) => void;
+  onUpdate: (contact: Contact) => void;
+};
+
+const ContactCard: React.FC<Props> = ({ contact, onDelete, onUpdate }) => {
   return (
     <Card
       variant="outlined"
@@ -12,12 +19,16 @@ const ContactCard = () => {
         alignItems: 'center',
       }}
     >
-      <Typography>name</Typography>
+      <Typography>{contact.name}</Typography>
       <Divider orientation="vertical" flexItem />
-      <Typography>89643500253</Typography>
+      <Typography>{contact.phone}</Typography>
       <Divider sx={{ ml: 'auto' }} orientation="vertical" flexItem />
-      <Button>редактировать</Button>
-      <Button color="error">удалить</Button>
+      <Button onClick={() => onUpdate(contact)} component="span">
+        редактировать
+      </Button>
+      <Button onClick={() => onDelete(contact)} color="error">
+        удалить
+      </Button>
     </Card>
   );
 };

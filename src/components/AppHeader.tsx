@@ -1,6 +1,11 @@
 import { Box, Button, Card, Divider, Typography } from '@mui/material';
 
-const AppHeader = () => {
+type Props = {
+  username: string;
+  onLogout: () => void;
+};
+
+const AppHeader: React.FC<Props> = ({ onLogout, username }) => {
   return (
     <Card
       component="header"
@@ -12,9 +17,9 @@ const AppHeader = () => {
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, ml: 'auto' }}>
-        <Typography>username</Typography>
+        <Typography>{username}</Typography>
         <Divider orientation="vertical" variant="middle" flexItem />
-        <Button>выйти</Button>
+        <Button onClick={onLogout}>выйти</Button>
       </Box>
     </Card>
   );

@@ -1,12 +1,15 @@
+import { Provider } from 'react-redux';
+import { store } from '../store/store';
+import Router from './router/Router';
 import ThemeProvider from './ThemeProvider';
-// import ContactsPage from './pages/ContactsPage';
-import EnterPage from './pages/EnterPage';
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <EnterPage />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider>
+        <Router />
+      </ThemeProvider>
+    </Provider>
   );
 };
 

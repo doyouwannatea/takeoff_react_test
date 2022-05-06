@@ -1,6 +1,5 @@
 import { Box } from '@mui/material';
 import AuthForm from '../forms/AuthForm';
-import RegisterForm from '../forms/RegisterForm';
 
 const EnterPage = () => {
   return (
@@ -15,8 +14,7 @@ const EnterPage = () => {
         padding: 2,
       }}
     >
-      {/* <AuthForm /> */}
-      <RegisterForm />
+      <AuthForm />
     </Box>
   );
 };
