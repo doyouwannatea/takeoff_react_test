@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "q",
+      "password": "q"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "dada",
+      "phone": "dasda",
+      "userId": 1,
+      "id": 50
+    },
+    {
+      "name": "dadada",
+      "phone": "d",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "name": "das",
+      "phone": "edqdq",
+      "userId": 1,
+      "id": 404981
+    }
+  ]
+}
